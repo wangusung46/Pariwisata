@@ -118,8 +118,6 @@ public class TransaksiJdbcImplement implements TransaksiJdbc {
             preparedStatement.setString(10, request.getDeskripsi_tambahan());
             preparedStatement.setDate(11, new java.sql.Date(request.getDari().getTime()));
             preparedStatement.setDate(12, new java.sql.Date(request.getSampai().getTime()));
-            long totalDate = Math.abs(request.getSampai().getTime() - request.getDari().getTime());
-            request.setTotal_tanggal(totalDate);
             preparedStatement.setLong(13, request.getTotal_tanggal());
             logger.debug(preparedStatement.toString());
             preparedStatement.executeUpdate();

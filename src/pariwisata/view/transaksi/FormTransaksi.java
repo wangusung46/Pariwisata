@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import net.sf.jasperreports.engine.JRException;
@@ -195,6 +196,7 @@ public class FormTransaksi extends javax.swing.JFrame {
                 request.setDeskripsi_tambahan(txtDeskripsiTambahan.getText());
                 request.setDari(jDateDari.getDate());
                 request.setSampai(jDateSampai.getDate());
+                request.setTotal_tanggal(jDateSampai.getDate().getTime() - jDateDari.getDate().getTime() / (24 * 60 * 60 * 1000));
                 transaksiJdbc.insert(request);
                 loadTable();
                 GetId();
@@ -224,6 +226,7 @@ public class FormTransaksi extends javax.swing.JFrame {
                     request.setDeskripsi_tambahan(txtDeskripsiTambahan.getText());
                     request.setDari(jDateDari.getDate());
                     request.setSampai(jDateSampai.getDate());
+                    request.setTotal_tanggal(jDateSampai.getDate().getTime() - jDateDari.getDate().getTime() / (24 * 60 * 60 * 1000));
                     transaksiJdbc.update(request);
                     loadTable();
 //                    empty();
