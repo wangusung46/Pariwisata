@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Wisata" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50328c8e-3630-42bd-ab70-bbadfdffa14e">
-	<property name="ireport.zoom" value="0.7513148009015777"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="64"/>
 	<property name="ireport.y" value="0"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Pulau Pari"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
@@ -122,7 +121,7 @@
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Pake Wisata]]></text>
+				<text><![CDATA[Paket Wisata]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="200" y="0" width="100" height="20" uuid="63af8054-1b28-42a8-8ad9-c38153a4681d"/>
@@ -285,26 +284,22 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="79" splitType="Stretch">
-			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="600" y="59" width="200" height="20" uuid="5d29a426-a0a4-4ec5-91fa-e6077e9cf496"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA["Jakarta, " + new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
-			</textField>
+		<band height="115" splitType="Stretch">
 			<staticText>
-				<reportElement x="600" y="20" width="200" height="20" uuid="069b6b97-e05c-4add-90a0-a2c5849d598d"/>
-				<box>
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Bagian Keuangan]]></text>
+				<reportElement x="604" y="54" width="198" height="20" uuid="7c1296b1-81e4-4c92-b661-f7e8c1f1e62d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Admin]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="604" y="95" width="198" height="20" uuid="0dba7446-f61b-400d-ad78-c6384a74aecf"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Ikrimah Murti, S.AP]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="604" y="34" width="198" height="20" uuid="020d9c82-28c8-4b0a-8d74-843c9fce5cae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Jakarta, " + new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageFooter>
 </jasperReport>
