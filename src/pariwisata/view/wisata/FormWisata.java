@@ -152,7 +152,7 @@ public class FormWisata extends javax.swing.JFrame {
                     request.setPaket(txtPktWisata.getText());
                     request.setHarga(Long.parseLong(txtHrgWisata.getText()));
                     request.setId_penginapan(Long.parseLong(cbxIdPenginapan.getSelectedItem().toString()));
-                    request.setNama_penginapan(txtPktWisata.getText());
+                    request.setNama_penginapan(txtNmPenginapan.getText());
                     request.setId_transportasi(Long.parseLong(cbxIdTransportasi.getSelectedItem().toString()));
                     request.setNama_transportasi(txtNmTransportasi.getText());
                     request.setDeskripsi_makanan_minuman(txtMenuMakanan.getText());
@@ -544,8 +544,8 @@ public class FormWisata extends javax.swing.JFrame {
     }//GEN-LAST:event_cbxIdTransportasiActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       new FormMenu().setVisible(true);
-       dispose();
+        new FormMenu().setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
