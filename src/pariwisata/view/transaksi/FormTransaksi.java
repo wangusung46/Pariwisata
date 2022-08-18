@@ -163,6 +163,8 @@ public class FormTransaksi extends javax.swing.JFrame {
         txtNamaPengunjung.setText(response.getNama_pengunjung());
         txtDeskrispsiMakanan.setText(response.getDeskripsi_makanan_minuman());
         txtDeskripsiTambahan.setText(response.getDeskripsi_tambahan());
+        jDateDari.setDate(response.getDari());
+        jDateSampai.setDate(response.getSampai());
         clickTable = true;
     }
 //
