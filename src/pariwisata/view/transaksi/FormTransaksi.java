@@ -196,7 +196,7 @@ public class FormTransaksi extends javax.swing.JFrame {
                 request.setDeskripsi_tambahan(txtDeskripsiTambahan.getText());
                 request.setDari(jDateDari.getDate());
                 request.setSampai(jDateSampai.getDate());
-                request.setTotal_tanggal(jDateSampai.getDate().getTime() - jDateDari.getDate().getTime() / (24 * 60 * 60 * 1000));
+                request.setTotal_tanggal((jDateSampai.getDate().getTime() - jDateDari.getDate().getTime()) / (24 * 60 * 60 * 1000));
                 transaksiJdbc.insert(request);
                 loadTable();
                 GetId();
@@ -226,7 +226,7 @@ public class FormTransaksi extends javax.swing.JFrame {
                     request.setDeskripsi_tambahan(txtDeskripsiTambahan.getText());
                     request.setDari(jDateDari.getDate());
                     request.setSampai(jDateSampai.getDate());
-                    request.setTotal_tanggal(jDateSampai.getDate().getTime() - jDateDari.getDate().getTime() / (24 * 60 * 60 * 1000));
+                    request.setTotal_tanggal((jDateSampai.getDate().getTime() - jDateDari.getDate().getTime()) / (24 * 60 * 60 * 1000));
                     transaksiJdbc.update(request);
                     loadTable();
 //                    empty();

@@ -119,7 +119,7 @@ public class TransaksiJdbcImplement implements TransaksiJdbc {
             preparedStatement.setDate(11, new java.sql.Date(request.getDari().getTime()));
             preparedStatement.setDate(12, new java.sql.Date(request.getSampai().getTime()));
             preparedStatement.setLong(13, request.getTotal_tanggal());
-            logger.debug(preparedStatement.toString());
+            logger.error(preparedStatement.toString());
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException e) {
